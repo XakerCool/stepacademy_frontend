@@ -14,3 +14,15 @@
 .td_side{
     background: #FFFF99;
 }
+.from_td_user_info{
+    color: green;
+}
+.form_character_info{
+    color: orange;
+}
+h1{
+    color: red;
+}
+h2{
+    background-color: #fff;
+}

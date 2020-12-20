@@ -14,40 +14,40 @@
     				<h2>Регистрация пользователя:</h2>
     				<table border="1">
 					    <tr>
-					       <td>Пользователь</td>
-					       <td>
+					       <td class="from_td_user_info">Пользователь</td>
+					       <td> class="form_character_info"
 					       		<input type="text" placeholder="Email" name="email" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td>Пароль</td>
+					       <td class="from_td_user_info">Пароль</td>
 					       <td>
 					            <input type="password" placeholder="Password" name="password" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td>Аватар</td>
+					       <td class="from_td_user_info">Аватар</td>
 					       <td>
 					       		<input type="file" name="avatar" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td>Дата рождения</td>
+					       <td class="from_td_user_info">Дата рождения</td>
 					       <td>
 					       		<input type="date" name="dateOfBirth" required>
 					       </td>
 					    </tr>
 					</table>
-					<h2>Персонаж</h2>
+					<h2>Персонаж: </h2>
 					<table border="1">
 					    <tr>
-					       <td>Имя</td>
+					       <td class="form_character_info">Имя</td>
 					       <td>
 					        	<input type="text" placeholder="Name" name="name" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td>Планета</td>
+					       <td class="form_character_info">Планета</td>
 					       <td>
 					       		<label>
 					       			<input type="radio" name="planet" value="corusant" required>
@@ -61,10 +61,10 @@
 					       			<input type="radio" name="planet" value="gallifrey" required>
 					       			gallifrey
 					       		</label>
-					       </td>
+					       </td class="form_character_info">
 					    </tr>
 					    <tr>
-					       <td>Опыт</td>
+					       <td class="form_character_info">Опыт</td>
 					       <td>
 					       		<label>
 					       			<input type="radio" name="background" value="pilot" required>
@@ -81,13 +81,13 @@
 					       </td>
 					    </tr>
 					    <tr>
-					       <td>Возраст</td>
+					       <td class="form_character_info">Возраст</td>
 					       <td>
 					       		<input type="number" name="age" min="1" value="1" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td>Характеристики</td>
+					       <td class="form_character_info">Характеристики</td>
 					       <td>
 					            <ul>
 					               <li>
@@ -113,7 +113,7 @@
 					    </tr>
 					  
 					    <tr>
-					       <td>Питомец</td>
+					       <td class="form_character_info">Питомец</td>
 					       <td>
 					       		<select name="pet" required>
 					       			<optgroup label="Белковые формы жизни">
@@ -131,7 +131,7 @@
 					    </tr>
 					  
 					    <tr>
-					       <td>Инвентарь</td>
+					       <td class="form_character_info">Инвентарь</td>
 					       <td>
 					       		<label>
 					       			Фонарик 
@@ -149,14 +149,14 @@
 					    </tr>
 
 					    <tr>
-					       <td>Цвет корабля</td>
+					       <td class="form_character_info">Цвет корабля</td>
 					       <td bgcolor="{shipColor}">
 					       		<input type="color" name="shipColor" required>
 					       </td>
 					    </tr>
 
 					    <tr>
-					       <td>Описание</td>
+					       <td class="form_character_info">Описание</td>
 					       <td>
 					        	<textarea name="description" cols="30" rows="10" ></textarea>
 					       </td>
