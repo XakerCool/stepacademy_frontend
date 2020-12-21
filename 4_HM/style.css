@@ -14,11 +14,16 @@
 .td_side{
     background: #FFFF99;
 }
-.from_td_user_info{
+.form_td_user_info{
     color: green;
+    height: 100px;
 }
 .form_character_info{
     color: orange;
+    height: 100px;
+}
+.form_character_input_info{
+    width: 200px;
 }
 h1{
     color: red;

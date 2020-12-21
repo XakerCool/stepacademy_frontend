@@ -14,41 +14,41 @@
     				<h2>Регистрация пользователя:</h2>
     				<table border="1">
 					    <tr>
-					       <td class="from_td_user_info">Пользователь</td>
+					       <td class="form_td_user_info">Пользователь</td>
 					       <td> class="form_character_info"
 					       		<input type="text" placeholder="Email" name="email" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td class="from_td_user_info">Пароль</td>
+					       <td class="form_td_user_info">Пароль</td>
 					       <td>
 					            <input type="password" placeholder="Password" name="password" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td class="from_td_user_info">Аватар</td>
+					       <td class="form_td_user_info">Аватар</td>
 					       <td>
 					       		<input type="file" name="avatar" required>
 					       </td>
 					    </tr>
 					    <tr>
-					       <td class="from_td_user_info">Дата рождения</td>
+					       <td class="form_td_user_info">Дата рождения</td>
 					       <td>
 					       		<input type="date" name="dateOfBirth" required>
 					       </td>
 					    </tr>
 					</table>
 					<h2>Персонаж: </h2>
-					<table border="1">
+					<table border="1" class="character_table">
 					    <tr>
 					       <td class="form_character_info">Имя</td>
-					       <td>
+					       <td class="form_character_input_info">
 					        	<input type="text" placeholder="Name" name="name" required>
 					       </td>
 					    </tr>
 					    <tr>
 					       <td class="form_character_info">Планета</td>
-					       <td>
+					       <td class="form_character_input_info">
 					       		<label>
 					       			<input type="radio" name="planet" value="corusant" required>
 					       			corusant
@@ -65,7 +65,7 @@
 					    </tr>
 					    <tr>
 					       <td class="form_character_info">Опыт</td>
-					       <td>
+					       <td class="form_character_input_info">
 					       		<label>
 					       			<input type="radio" name="background" value="pilot" required>
 					       			pilot
@@ -82,13 +82,13 @@
 					    </tr>
 					    <tr>
 					       <td class="form_character_info">Возраст</td>
-					       <td>
+					       <td class="form_character_input_info">
 					       		<input type="number" name="age" min="1" value="1" required>
 					       </td>
 					    </tr>
 					    <tr>
 					       <td class="form_character_info">Характеристики</td>
-					       <td>
+					       <td class="form_character_input_info">
 					            <ul>
 					               <li>
 					               		<label>
@@ -114,7 +114,7 @@
 					  
 					    <tr>
 					       <td class="form_character_info">Питомец</td>
-					       <td>
+					       <td class="form_character_input_info">
 					       		<select name="pet" required>
 					       			<optgroup label="Белковые формы жизни">
 					       				<option value="cat">Кошка</option>
@@ -132,7 +132,7 @@
 					  
 					    <tr>
 					       <td class="form_character_info">Инвентарь</td>
-					       <td>
+					       <td class="form_character_input_info">
 					       		<label>
 					       			Фонарик 
 					       			<input type="checkbox" name="inventory-torch" value="Фонарик">
@@ -150,14 +150,14 @@
 
 					    <tr>
 					       <td class="form_character_info">Цвет корабля</td>
-					       <td bgcolor="{shipColor}">
+					       <td bgcolor="{shipColor}" class="form_character_input_info">
 					       		<input type="color" name="shipColor" required>
 					       </td>
 					    </tr>
 
 					    <tr>
 					       <td class="form_character_info">Описание</td>
-					       <td>
+					       <td class="form_character_input_info">
 					        	<textarea name="description" cols="30" rows="10" ></textarea>
 					       </td>
 					    </tr>
