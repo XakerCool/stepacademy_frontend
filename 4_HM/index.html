@@ -24,30 +24,30 @@
 					<li>Имя: <input type="text" placeholder="Name" name="name" required></li>
 					<li>
 						Планета: 
-						<label  for="planet">
+						<label>
 							<input type="radio" name="planet" value="corusant" required>
 							corusant
 						</label>
-						<label for="planet">
+						<label>
 							<input type="radio" name="planet" value="cybertron" required>
 							cybertron
-						</label for="planet">
-						<label for="planet">
+						</label>
+						<label>
 							<input type="radio" name="planet" value="gallifrey" required>
 							gallifrey
 						</label>
 					</li>
 					<li>
 						Опыт:
-						<label for="background">
+						<label>
 							<input type="radio" name="background" value="pilot" required>
 							pilot
 						</label>
-						<label for="background">
+						<label>
 							<input type="radio" name="background" value="miner" required>
 							miner
 						</label>
-						<label for="background">
+						<label>
 							<input type="radio" name="background" value="merhant" required>
 							merhant
 						</label>
@@ -58,15 +58,15 @@
 					</li>
 					<li>
 						Характеристики: 
-						<label for="intelligence">
+						<labe>
 							Интеллект:
 							<input type="number" min="1" max="20" name="intelligence" disabled required>
 						</label>
-						<label for="intelligence">
+						<label>
 							Телосложение:
 							<input type="number" min="1" max="20" name="constitution" disabled required>
 						</label>
-						<label for="intelligence">
+						<label>
 							Харизма:
 							<input type="number" min="1" max="20" name="charisma" disabled required>
 						</label>
@@ -88,15 +88,15 @@
 					</li>
 					<li>
 						Инвентарь: 
-						<label for="inventory-torch">
+						<label>
 							<input type="checkbox" name="inventory-torch" value="Фонарик">
 							Фонарик 
 						</label>
-						<label for="inventory-tuna">
+						<label>
 							<input type="checkbox" name="inventory-tuna" value="Консервы">
 							Консервы 
 						</label>
-						<label for="inventory-launch_death_star_button">
+						<label>
 							<input type="checkbox" name="inventory-launch_death_star_button" value="Кнопка запуска Звезды Смерти">
 							Кнопка запуска Звезды Смерти 
 						</label>
@@ -111,7 +111,8 @@
 					</li>
 				</ul>
 			</div>
-			<button id="roll">Сгенерировать</button>
+			<button id="roll" type="button">Сгенерировать Характеристики</button>
+			<button type="submit">Отправить</button>
 		</form>
 	</body>
 </html>
