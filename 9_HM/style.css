@@ -50,6 +50,7 @@ body {
 }
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body, html{
@@ -119,7 +120,30 @@ body, html{
     border-top: 10px solid #000;
     position: relative;
 }
+.cars{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+.spot{
+    flex: 0 0 145px;
+    padding: 30px;
+    height: 100%;
+}
+.car{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 30px 30px 20px 20px;
+}
 .flat{
     height: 100%;
     width: 100%;
@@ -169,48 +193,58 @@ body, html{
 .centre__up{
     flex: 3 3 auto;
 }
-.garage__pillar1, .garage__pillar2{
-    right: 0;
+
+.measurable{
+    position: relative;
+}
+
+.size{
     position: absolute;
-    border: 10px solid black;
+    background-color: #000;
+    border-radius: 0 0 5px 5px;
+    padding: 4px;
+    color: #fff;
+    display: none;
 }
-.garage__pillar1{
+.measurable:hover>.size{
+    display: block;
+}
+.size-x {
     top: 0;
+    left: 50%;
 }
-.garage__pillar2{
+.size-y{
+    top: 50%;
+    left: 0;
+    transform-origin: top left; transform: rotateZ(-90deg) translate(-50%, 0);
+}
+
+.garage-pillars{
+    position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
 }
-.secret{
+.garage-pillar{
+    background-color: #000;
+} 
+.garage-pillar-top{
     position: absolute;
-    right: 10px;
     top: 0;
-    height: 95%;
+    right: 0;
     width: 10px;
-    background-color: hsl(0, 0%, 90%);
-    z-index: 1;
+    height: 10px;
 }
-.parking{
+.garage-pillar-bottom-1, .garage-pillar-bottom-2{
     position: absolute;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    bottom: 0;
+    width: 10px;
 }
-.parking_place{
-    height: 100%;
-    width: 145px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.garage-pillar-bottom-1{
+    right: 10px;
+    height: 10px;
 }
-.car{
-    width: 85px;
-    height: 140px;
-    border: 1px solid black;
-    border-radius: 30% 30% 20px 20px;
+.garage-pillar-bottom-2{
+    height: 20px;
+    right: 0;
 }
