@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Малевич</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .easel{
+      height: 800px;
+      position: relative;
+    }
+
+    .palette {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      transform: translateX(-100%) translateX(-10px)
+    }
+
+    .reference {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      opacity: 0.1;
+    }
+
+    .canvas {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      background-color: #f1f2ec;
+    }
+
+
+    .shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+
+      background-color: grey;
+    }
+
+
+    /* изи */
+    .rect1 {
+      transform-origin: top left;
+      transform: translate(190px, 190px) rotateZ(-45deg) scale(1.2, 0.8);
+      background-color: #efa601;
+    }
+    .rect2-parent{
+      perspective: 250px;
+      /* background-color: black; */
+    }
+    .rect2{
+      transform-origin: top left;
+      transform: translate(125px, 369px) rotateZ(-44deg) scale(3.7, .27) rotateY(-25deg);
+      background-color: #170b3b;
+    }
+    .rect3-parent{
+      perspective: 250px;
+      perspective-origin: left center;
+    }
+    .rect3{
+      background-color: #020202;
+      transform: translate(204px, 309px) rotateZ(-33deg) rotateY(180deg) rotateX(7deg) scale(0.99, .93);
+    }
+    .rect4{
+      transform-origin: top left;
+      transform: translate(197px, 456px) rotateZ(-33deg) scale(3.15, 0.86);
+      background-color: #e42d03;
+    }
+    .rect5{
+      transform-origin: top left;
+      transform: translate(435px, 404px) rotateZ(-33deg) scale(1.75, .87);
+      background-color: #000000;
+    }
+    .rect6{
+      transform-origin: top left;
+      transform: translate(383px, 522px) scale(2.37, 2.39) rotateZ(-1.2deg);
+      background-color: #d99e02;
+    }
+
+
+
+
+
+    /* мудиум */
+    .rect1_1{
+      transform-origin: top left;
+      transform: translate(179px, 37px) scale(2.75, 2.72);
+      background-color: #000000;
+    }
+    .rect2_1{
+      transform-origin: top left;
+      transform: translate(47px, 352px) scale(1.1, 1.75);
+      background-color: #f7ac04;
+    }
+    .rect3_1{
+      transform-origin: top left;
+      transform: translate(119px, 527px) scale(.7, .63);
+      background-color: #8f3d0a;
+    }
+    .rect4_1{
+      transform-origin: top left;
+      transform: translate(183px, 445px) scale(.9, .87);
+      border-radius: 50%;
+      border: 18px solid;
+      border-color: #8d4218;
+      background-color: transparent;
+    }
+    .rect5_1-parent{
+      perspective: 250px;
+      perspective-origin: top left;
+    }
+    .rect5_1{
+      transform-origin: top left;
+      transform: translate(266px, 577px) rotateZ(-35deg) scale(2.25, 21) rotateX(-75.5deg);
+      background-color: #1c3c62;
+    }
+    .rect6_1{
+      transform-origin: top left;
+      transform: translate(457px, 692.5px) rotateZ(-38.5deg) scale(1.58, .46);
+      background-color: #000000;
+    }
+
+
+
+    /* хард   */
+    .rect1_2{
+      transform-origin: top left;
+      transform: translate(461px, 86px) rotateZ(37deg) scale(2.5, 1.07);
+      background-color: green;
+    }
+    .rect2_2-parent{
+      perspective: 500px;
+      perspective-origin: right center;
+      transform-origin: left top;
+      transform: translate(175px, 4px) rotateZ(37deg) scale(7.15, 2);
+    }
+    .rect2_2{
+      transform-origin: left top;
+      transform: rotateY(135deg) scale(3.4, 1.2);
+      background-color: #000;
+    }
+    .rect3_2-parent{
+      perspective: 500px;
+      perspective-origin: right center;
+      transform-origin: top left;
+      transform: translate(178px, 283px) rotateZ(30deg) scale(6, .5);
+    }
+    .rect3_2{
+      transform-origin: left top;
+      transform: rotateY(141deg) scale(9, 1);
+      background-color: #c1a214;
+    }
+    .rect4_2-parent{
+      perspective: 1000px;
+      perspective-origin: right center;
+      transform-origin: top left;
+      transform: translate(208px, 355px) rotateZ(27.4deg) scale(5.1, .2);
+    }
+    .rect4_2{
+      transform-origin: left top;
+      transform: rotateY(118.4deg) scale(6.85, 1);
+      background-color: #3361a0;
+    }
+    .rect5_2-parent{
+      perspective: 1000px;
+      perspective-origin: right center;
+      transform-origin: left top;
+      transform: translate(334px, 440px) rotateZ(26.5deg) scale(2.8, .95);
+    }
+    .rect5_2{
+      transform-origin: left top;
+      transform: rotateY(71deg);
+      background-color: #112760;
+    }
+  </style>
+</head>
+<body>
+  <!-- изи -->
+  <!-- <div class="easel">
+    <img class="palette" src="easy.jpg"/>
+    <img class="reference" src="easy.jpg">
+    <div class="canvas">
+      <div class="shape rect1"></div>
+      <div class="rect2-parent">
+        <div class="shape rect2"></div>
+      </div>
+      <div class="rect3-parent">
+        <div class="shape rect3"></div>
+      </div>
+      <div class="shape rect4"></div>
+      <div class="shape rect5"></div>
+      <div class="shape rect6"></div>
+    </div>
+  </div> -->
+
+  <!-- медиум -->
+  <!-- <div class="easel">
+    <img class="palette" src="medium.jpg"/>
+    <img class="reference" src="medium.jpg">
+    <div class="canvas">
+      <div class="shape rect1_1"></div>
+      <div class="shape rect2_1"></div>
+      <div class="shape rect3_1"></div>
+      <div class="shape rect4_1"></div>
+      <div class="rect5_1-parent">
+        <div class="shape rect5_1"></div>
+      </div>
+      <div class="shape rect6_1"></div>
+    </div>
+  </div> -->
+
+  <!-- хард -->
+  <div class="easel">
+    <img class="palette" src="hard.jpg"/>
+    <img class="reference" src="hard.jpg">
+    <div class="canvas">
+      <div class="shape rect1_2"></div>
+      <div class="rect2_2-parent parent">
+        <div class="shape rect2_2"></div>
+      </div>
+      <div class="rect3_2-parent parent">
+        <div class="shape rect3_2"></div>
+      </div>
+      <div class="rect4_2-parent parent">
+        <div class="shape rect4_2"></div>
+      </div>
+      <div class="rect5_2-parent parent">
+        <div class="shape rect5_2"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Интересно</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #CCE5FF;
+        }
+
+        .heart{
+            position: relative;
+            height: 90px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .heart_icon{
+            font-size: 100px;
+            color: #FF3333;
+            transition: 0.2s;
+        }
+        .heart_icon:hover{
+            color: #DE2E2E;
+        }
+        .heart::before, .heart::after{
+            position: absolute;
+            z-index: -1;
+            top: -10px;
+            transition: 1s;
+        }
+        .heart::before{
+            content: url('left_wing.png');
+            left: -53px;
+
+            transform-origin: right center;
+            transform: rotateZ(-120deg);
+        }
+        .heart::after{
+            content: url('right_wing.png');
+            right: -53px;
+
+            transform-origin: left center;
+            transform: rotateZ(120deg);
+        }
+        @keyframes left-wing-animate{
+            0%{
+                transform: rotateZ(10deg) scale(1.5);
+            }
+            100%{
+                transform: rotateZ(-100deg) scale(1.5);
+            }
+        }
+        @keyframes right-wing-animate{
+            0%{
+                transform: rotateZ(-10deg) scale(1.5);
+            }
+            100%{
+                transform: rotateZ(100deg) scale(1.5);
+            }
+        }
+        .heart:hover::after, .heart:hover::before{
+            animation-duration: 2s;
+            animation-delay: 1.1s;
+            animation-timing-function: ease-in-out;
+
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .heart:hover::before{
+            transform: rotateZ(10deg) scale(1.5);
+
+            animation-name: left-wing-animate;
+            
+        }
+        .heart:hover::after{
+            transform: rotateZ(-10deg) scale(1.5);
+
+            animation-name: right-wing-animate;
+        }
+        .heart_icon{
+            position: relative;
+        }
+        .heart_icon::after{
+            content: '';
+            display: block;
+            position: absolute;
+
+            top: 25px;
+            left: 21px;
+
+            height: 25px;
+            width: 50px;
+            border-radius: 50%;
+            border: 5px solid #FFFF66;
+
+            z-index: -1;
+
+            transition: .6s;
+        }
+        .heart:hover .heart_icon::after{
+            top: -40px;
+
+            animation-name: nimb-animate;
+            animation-duration: .5s;
+            animation-delay: .7s;
+            animation-timing-function: linear;
+
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes nimb-animate{
+            0%{
+                top: -40px;
+            }
+            100%{
+                top: -35px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <i class="fas fa-heart heart_icon"></i>
+    </div>
+</body>
+</html>
