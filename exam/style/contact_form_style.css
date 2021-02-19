@@ -1,0 +1,165 @@
+.contact_form{
+    padding: 128px 16px;
+}
+    .contact_form img{
+        width: 100%;
+        margin-top: 48px;
+    }
+.contact__text{
+    text-align: center;
+}
+    .contact__text h3{
+        font-weight: 400;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .contact__text p{
+        font-size: 18px;
+        margin: 18px 0;
+    }
+.contact__data{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 48px;
+}
+    .contact__data p{
+        margin: 15px 0;
+    }
+    .contact__data p i{
+        font-size: 36px;
+        margin-right: 16px;
+    }
+.form{
+    display: flex;
+    flex-direction: column;
+}
+    .form p{
+        text-align: center;
+        font-size: 18px;
+    }
+.registration_form{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 30%;
+
+    margin-bottom: 40px;
+}
+    .simple_label{
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 10px;
+    }
+.text_input_field{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    padding: 10px 5px;
+}
+    .text_input_field:focus{
+        border-color: #000;
+    }
+    .text_input_field:valid:not(:placeholder-shown) {
+        border-color: green;
+      }
+      
+    .text_input_field:invalid:not(:placeholder-shown) {
+        border-color: red;
+    }
+.textarea_input_field{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    padding: 10px 5px;
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+    .textarea_input_field:focus{
+        border-color: #000;
+    }
+.submit_button{
+    border-radius: 5px;
+    padding: 10px 5px;
+    width: 50%;
+
+    align-self: center;
+    background-color: #f1f1f1;
+    transition: 0.2s;
+}
+    .submit_button:hover{
+        cursor: pointer;
+        background-color: #ccc;
+    }
+
+.send_mail_form{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 30%;
+}
+    .minibuttons_label{
+        flex-direction: row;
+    }
+.select_worker{
+    width: 50%;
+    align-self: center;
+
+    border: 1px solid #000;
+
+    padding: 2%;
+
+    border-radius: 5px 5px 0 0;
+}
+.send_button{
+    border-radius: 5px;
+    padding: 10px 5px;
+    width: 50%;
+
+    align-self: center;
+    background-color: #f1f1f1;
+    transition: 0.2s;
+}
+    .send_button:hover{
+        cursor: pointer;
+        background-color: #ccc;
+    }
+
+@media(max-width: 800px){
+    .form form{
+        padding: 0 20px;
+    }
+    .send_button{
+        width: 70%;
+    }
+    .submit_button{
+        width: 70%;
+    }
+    .select_worker{
+        width: 70%;
+    }
+}
+@media(max-width: 400px){
+    .send_button{
+        width: 100%;
+    }
+    .submit_button{
+        width: 100%;
+    }
+    .select_worker{
+        width: 100%;
+    }
+}
+@media(max-width: 700px)
+{
+    .contact__data{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

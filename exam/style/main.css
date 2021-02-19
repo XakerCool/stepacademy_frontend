@@ -1,0 +1,18 @@
+.uppercase_text{
+    text-transform: uppercase;
+}
+.bold_text{
+    font-weight: bold;
+}
+.link{
+    color: #000;
+}
+.light_text{
+    opacity: 0.60;
+}
+.italic_text{
+    font-style: italic;
+}
+.underline_text{
+    text-decoration: underline;
+}

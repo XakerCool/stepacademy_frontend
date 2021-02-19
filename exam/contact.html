@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/nullstyle.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/header_footer.css">
+    <link rel="stylesheet" href="style/contact_form_style.css">
+
+    <script src="https://kit.fontawesome.com/cba5d3da34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    
+    <script src="scripts/main.js"></script>
+
+    <title>Exam contact</title>
+</head>
+<body>
+    <div class="up_panel">
+        <div class="up_panel__content">
+            <a href="index.html" class="up_panel__logo">
+                <span class="logo__text uppercase_text">logo</span>
+            </a>
+            <div class="up_panel__nav">
+                <a href="index.html#about" class="link list__item">
+                    <span class="inner_text uppercase_text">about</span>
+                </a>
+                <a href="index.html#team" class="link list__item">
+                    <i class="fas fa-user"></i>
+                    <span class="inner_text uppercase_text">team</span>
+                </a>
+                <a href="index.html#work" class="link list__item">
+                    <i class="fas fa-th"></i>
+                    <span class="inner_text uppercase_text">work</span>
+                </a>
+                <a href="index.html#pricing" class="link list__item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="inner_text uppercase_text">pricing</span>
+                </a>
+                <a href="contact.html" class="link list__item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="inner_text uppercase_text">contact</span>
+                </a>
+                <a href="article.html#article" class="link list__item">
+                    <span class="inner_text uppercase_text">read more</span>
+                </a>
+            </div>
+            <div class="up__burger">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="left_side_panel hide_left_side_menu hidden_element" id="left_side_menu">
+        <a href="" class="link list__item close_button" id="left_side_menu_item">
+            <span class="inner_text uppercase_text">Close ×</span>
+        </a>
+        <a href="index.html#about" class="link list__item" id="left_side_menu_item">
+            <span class="inner_text uppercase_text">about</span>
+        </a>
+        <a href="index.html#team" class="link list__item" id="left_side_menu_item">
+            <i class="fas fa-user"></i>
+            <span class="inner_text uppercase_text">team</span>
+        </a>
+        <a href="index.html#work" class="link list__item" id="left_side_menu_item">
+            <i class="fas fa-th"></i>
+            <span class="inner_text uppercase_text">work</span>
+        </a>
+        <a href="index.html#pricing" class="link list__item" id="left_side_menu_item">
+            <i class="fas fa-dollar-sign"></i>
+            <span class="inner_text uppercase_text">pricing</span>
+        </a>
+        <a href="contact.html" class="link list__item" id="left_side_menu_item">
+            <i class="fas fa-envelope"></i>
+            <span class="inner_text uppercase_text">contact</span>
+        </a>
+        <a href="article.html#article" class="link list__item left_side_menu_item">
+            <span class="inner_text uppercase_text">read more</span>
+        </a>
+    </div>    
+
+    <div class="contact_form" id="contact">
+        <div class="contact__text">
+            <h3><span class="uppercase_text">contact</span></h3>
+            <p>Lets get in touch. Send us a message:</p>
+        </div>
+        <div class="contact__data">
+            <p>
+                <i class="fa fa-map-marker fa-fw"></i>
+                Chicago, US
+            </p>
+            <p>
+                <i class="fa fa-phone fa-fw"></i>
+                Phone: +00 151515
+            </p>
+            <p>
+                <i class="fa fa-envelope fa-fw"></i>
+                Email: mail@mail.com
+            </p>
+        </div>
+        <div class="form">
+            <p>Sign up for feedback: </p>
+            <form action="" class="registration_form">
+                <label class="simple_label">
+                    Name:
+                    <input type="text" name="name" placeholder="Name" required tabindex="1" class="text_input_field">
+                </label>
+                <label class="simple_label">
+                    Password:
+                    <input type="password" name="password" placeholder="Password" required tabindex="2" pattern=".{8,}" class="text_input_field">
+                </label>
+                <label class="simple_label">
+                    Phone:
+                    <input type="tel" name="phone" placeholder="Phone" required tabindex="4" class="text_input_field">
+                </label>
+                <input type="submit" value="Sign up" class="submit_button" tabindex="5">
+            </form>
+            <p>Fill the form for feedback:</p>
+            <form action="" class="send_mail_form">
+                <label class="simple_label">
+                    Email:
+                    <input type="email" name="email" placeholder="Email" required tabindex="6" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="text_input_field">
+                </label>
+                <label class="simple_label">
+                    Message:
+                    <textarea name="message" required tabindex="7" class="textarea_input_field"></textarea>
+                </label class="simple_label">
+                <div class="checkboxes_fields">
+                    <label class="minibuttons_label">
+                        <input type="checkbox" name="send_to_email" tabindex="8">
+                        send message to your email
+                    </label>
+                    <label class="minibuttons_label">
+                        <input type="checkbox" name="send_to_phone" tabindex="9">
+                        send message to your phone
+                    </label>
+                    <label class="minibuttons_label">
+                        <input type="checkbox" name="ring_to_phone" tabindex="10">
+                        ring to your phone
+                    </label>
+                </div>
+                <div class="radiobuttons_fields">
+                    <label class="minibuttons_label">
+                        <input type="radio" name="subscribe_type" tabindex="11">
+                        Basic
+                    </label>
+                    <label class="minibuttons_label">
+                        <input type="radio" name="subscribe_type" tabindex="12">
+                        Pro
+                    </label>
+                    <label class="minibuttons_label">
+                        <input type="radio" name="subscribe_type" tabindex="13">
+                        Premium
+                    </label>
+                </div>
+                <label class="simple_label">
+                    If you're writing a complaint to the team, please, choose a worker: 
+                    <select name="workerName" class="select_worker">
+                        <option value="john_doe">John Doe</option>
+                        <option value="anja_doe">Anja Doe</option>
+                        <option value="mike_ross">Mike Ross</option>
+                        <option value="dan_star">Dan Star</option>
+                    </select>
+                </label>
+                <button type="button" class="send_button">Send</button>
+            </form>
+        </div>
+        <img src="images/map.jpg" alt="">
+    </div>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <a href="#contact" class="footer__to_the_top_button">
+                <i class="fas fa-arrow-up"></i>
+                <span>To The Top</span>
+            </a>
+            <div class="footer__links">
+                <a href="" class="footer__link link">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="" class="footer__link link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="footer__link link">
+                    <i class="fab fa-snapchat"></i>
+                </a>
+                <a href="" class="footer__link link">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                <a href="" class="footer__link link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="footer__link link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <p class="footer__text">
+                <span>Powered by</span>
+                <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
